@@ -1,0 +1,283 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of a Software Engineer with a focus on Cybersecurity. Showcasing skills, projects, and photography.">
+    <meta name="keywords" content="Software Engineer, Cybersecurity, Portfolio, Photography">
+    <meta name="author" content="Akash Adarkar">
+    <title>Software Engineer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdownButton = document.getElementById('dropdown-button');
+            const dropdownMenu = document.getElementById('dropdown-menu');
+            const regularMenu = document.getElementById('regular-menu');
+
+            // Toggle the dropdown menu when the button is clicked
+            dropdownButton.addEventListener('click', () => {
+                dropdownMenu.classList.toggle('hidden');
+            });
+
+            // Adjust visibility based on screen width
+            const updateMenuVisibility = () => {
+                if (window.innerWidth <= 1090) {
+                    // Hide regular menu and show dropdown button
+                    regularMenu.classList.add('hidden');
+                    dropdownButton.classList.remove('hidden');
+                } else {
+                    // Show regular menu and hide dropdown button
+                    regularMenu.classList.remove('hidden');
+                    dropdownButton.classList.add('hidden');
+                    dropdownMenu.classList.add('hidden'); // Close dropdown if resizing back
+                }
+            };
+
+            window.addEventListener('resize', updateMenuVisibility);
+            updateMenuVisibility(); // Run initially to set the correct state
+        });
+    </script>
+</head>
+<body class="bg-gray-900 text-white font-sans px-1 md:px-32">
+<!-- <body class="bg-gray-900 text-white font-sans px-1 md:px-32 bg-cover bg-center" style="background-image: url('./assets/straight-grid.jpg');"> -->
+   
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">Akash Adarkar</h1>
+
+            <!-- Dropdown Button (Visible on smaller screens) -->
+            <button id="dropdown-button" class="sm:hidden block text-3xl bg-gray-700 p-2 rounded">
+                &#9776;
+            </button>
+
+            <!-- Regular Menu (Visible on larger screens) -->
+            <ul id="regular-menu" class="hidden sm:flex space-x-6">
+                <li><a href="#skills" class="hover:text-cyan-500">Skills</a></li>
+                <li><a href="#projects" class="hover:text-cyan-500">Projects</a></li>
+                <li><a href="#gallery" class="hover:text-cyan-500">Photography</a></li>
+                <li><a href="#contact" class="hover:text-cyan-500">Contact</a></li>
+                <li>
+                    <a href="https://drive.google.com/file/d/1t74tPqPnTw4dzRcy6QAvrtttA_-GbAxF/view?usp=sharing" download class="px-4 py-2 bg-cyan-500 text-black shadow hover:bg-cyan-400">Download Resume</a>
+                </li>
+            </ul>
+
+            <!-- Dropdown Menu (Hidden by default, appears on small screens) -->
+            <div id="dropdown-menu" class="hidden absolute top-16 left-0 w-full bg-gray-800 shadow-lg z-50">
+                <ul class="space-y-4 p-4">
+                    <li><a href="#skills" class="hover:text-cyan-500">Skills</a></li>
+                    <li><a href="#projects" class="hover:text-cyan-500">Projects</a></li>
+                    <li><a href="#gallery" class="hover:text-cyan-500">Photography</a></li>
+                    <li><a href="#contact" class="hover:text-cyan-500">Contact</a></li>
+                    <li><a href="https://drive.google.com/file/d/1t74tPqPnTw4dzRcy6QAvrtttA_-GbAxF/view?usp=sharing" download class="block px-4 py-2 bg-cyan-500 text-black shadow hover:bg-cyan-400">Download Resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        
+    
+
+    <!-- Hero Section -->
+    <!-- <header class="py-16 bg-gray-800 px-10">
+        <div class="container mx-auto text-left">
+            <h2>Hello, I'm Akash Adarkar</h2>
+            <h1 class="text-3xl font-bold">Software Engineer & Cybersecurity Enthusiast</h1>
+            <p class="text-lg mt-4">
+                "Driven by a passion for creating user-centric web solutions with Node.js and an unrelenting enthusiasm for cybersecurity!"</p>
+        </div>
+    </header> -->
+    <header class="py-16 bg-gray-800 px-10 " style="background-image: url('./assets/background-image.jpg'); background-size: cover; background-position: center; ">
+        <div class="container mx-auto text-left">
+            <h2 class="text-2xl font-semibold text-orange-500 ">Hello, I'm Akash Adarkar</h2>
+            <h1 class="text-3xl font-bold">Software Engineer & Cybersecurity Enthusiast</h1>
+            <p class="text-lg mt-4">
+                "Driven by a passion for creating user-centric web solutions with Node.js and an unrelenting enthusiasm for cybersecurity!"
+            </p>
+        </div>
+    </header>
+    
+
+    <!-- About Section -->
+    <!-- <section id="about" class="py-16">
+        <div class="container mx-auto text-center">
+            <h3 class="text-2xl font-bold">About Me</h3>
+            <p class="mt-4 text-gray-400">I am a Software Engineer specializing in Cybersecurity with experience in developing secure web applications. When I’m not coding, I enjoy capturing the world through my lens.</p>
+        </div>
+    </section> -->
+        <!-- Skills Section -->
+      
+
+        <section id="skills" class="py-16 bg-gray-900 ">
+            <div class="container mx-auto">
+                <h3 class="text-2xl font-bold text-center mb-8">Skills & Technologies</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 px-10">
+                    <div class="flex justify-center items-center p-4 bg-gray-800 shadow hover:shadow-lg hover:scale-105 transform transition duration-300">
+                        <img src="./assets/python.png" alt="Python" class="h-16">
+                    </div>
+                    <div class="flex justify-center items-center p-4 bg-gray-800 shadow hover:shadow-lg hover:scale-105 transform transition duration-300">
+                        <img src="./assets/linux.png" alt="Linux" class="h-16">
+                    </div>
+                    <div class="flex justify-center items-center p-4 bg-gray-800 shadow hover:shadow-lg hover:scale-105 transform transition duration-300">
+                        <img src="./assets/js.png "alt="Javascript" class="h-16">
+                    </div>
+                    <div class="flex justify-center items-center p-4 bg-gray-800 shadow hover:shadow-lg hover:scale-105 transform transition duration-300">
+                        <img src="./assets/css-3.png "alt="CSS3" class="h-16">
+                    </div>
+                    <div class="flex justify-center items-center p-4 bg-gray-800 shadow hover:shadow-lg hover:scale-105 transform transition duration-300">
+                        <img src="./assets/html-5.png" alt="HTML-5" class="h-16">
+                    </div>
+                    <div class="flex justify-center items-center p-4 bg-gray-800 shadow hover:shadow-lg hover:scale-105 transform transition duration-300">
+                        <img src="./assets/mysql.png" alt="MySQL" class="h-16">
+                    </div>
+                    <div class="flex justify-center items-center p-4 bg-gray-800 shadow hover:shadow-lg hover:scale-105 transform transition duration-300">
+                        <img src="./assets/windows.png" alt="windows 10" class="h-16">
+                    </div>
+                    <div class="flex justify-center items-center p-4 bg-gray-800 shadow hover:shadow-lg hover:scale-105 transform transition duration-300">
+                        <img src="./assets/git.png" alt="Git" class="h-16">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-800">
+        <div class="container mx-auto">
+            <h3 class="text-2xl font-bold text-center">Projects</h3>
+            <div class="mt-8 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-10">
+                <div class="p-4 bg-gray-700 shadow hover:shadow-xl hover:scale-105 transform transition duration-300">
+                    <img src="./assets/Add-Comment-4--Streamline-Brooklyn.png" alt="Blog App" class="w-full h-48 object-cover rounded-md">
+                    <h4 class="text-xl font-semibold mt-4">
+                        <a href="project1-details.html" class="text-cyan-500 hover:underline">Blog Application</a>
+                    </h4>
+                    <p class="mt-2 text-gray-400">Developed a web application to efficiently manage blogs, comments, and categories while automating manual processes.
+                        The project streamlines blog creation and sharing, reducing complexity and enhancing user experience. It provides an
+                        intuitive interface, ensuring accessibility for users across diverse topics such as education, health, and technology.</p>
+                    <!-- <a href="project1-details.html" class="mt-4 inline-block text-cyan-500 hover:underline">View Details</a> -->
+                </div>
+                <div class="p-4 bg-gray-700 shadow hover:shadow-xl hover:scale-105 transform transition duration-300">
+                    <img src="./assets/Doctor-Nurse--Streamline-Brooklyn.png" alt="Mental-Healthcare" class="w-full h-48 object-cover rounded-md">
+                    <h4 class="text-xl font-semibold mt-4">
+                        <a href="project2-details.html" class="text-cyan-500 hover:underline">Mental Health Care App</a>
+                    </h4>
+                    <p class="mt-2 text-gray-400">Designed and developed an Android app using Java and APIs for personalized mental health management. It offers tailored assessments, activity suggestions, and a user-friendly dashboard to track progress. Focused on user-centric design, the app empowers users to improve emotional resilience and achieve wellness goals.</p>
+                    <a href="project2-details.html" class="mt-4 inline-block text-cyan-500 hover:underline">View Details</a>
+                </div>
+                <div class="p-4 bg-gray-700 shadow hover:shadow-xl hover:scale-105 transform transition duration-300">
+                    <img src="./assets/Phishing-Website--Streamline-Brooklyn.png" alt="Crime_ReportingApp" class="w-full h-48 object-cover rounded-md">
+                    <h4 class="text-xl font-semibold mt-4">
+                        <a href="project3-details.html" class="text-cyan-500 hover:underline">Crime Reporting App</a>
+                    </h4>
+                    <p class="mt-2 text-gray-400">A brief description of the project, its purpose, and technologies used.</p>
+                    <a href="project3-details.html" class="mt-4 inline-block text-cyan-500 hover:underline">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Image Gallery Section -->
+
+
+<!-- <section id="gallery" class="py-16 bg-gray-800">
+    <div class="container mx-auto">
+      <h3 class="text-2xl font-bold text-center text-white">Photography Gallery</h3>
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-10">
+        <div class="mb-4 h-64 break-inside-avoid rounded-lg border-2 border-slate-400/10 bg-neutral-100 p-4">
+          <img src="./assets/porsche.jpeg" alt="Photography 1" class="w-full h-full object-cover rounded-lg shadow-lg hover:shadow-xl">
+        </div>
+        <div class="mb-4 h-96 col-span-2 break-inside-avoid rounded-lg border-2 border-slate-400/10 bg-neutral-100 p-4">
+          <img src="./assets/porsche.jpeg" alt="Photography 2" class="w-full h-full object-cover rounded-lg shadow-lg hover:shadow-xl">
+        </div>
+        <div class="mb-4 h-80 break-inside-avoid rounded-lg border-2 border-slate-400/10 bg-neutral-100 p-4">
+          <img src="./assets/porsche.jpeg" alt="Photography 3" class="w-full h-full object-cover rounded-lg shadow-lg hover:shadow-xl">
+        </div>
+        <div class="mb-4 h-80 col-span-2 break-inside-avoid rounded-lg border-2 border-slate-400/10 bg-neutral-100 p-4">
+          <img src="./assets/porsche.jpeg" alt="Photography 4" class="w-full h-full object-cover rounded-lg shadow-lg hover:shadow-xl">
+        </div>
+        <div class="mb-4 h-60 break-inside-avoid rounded-lg border-2 border-slate-400/10 bg-neutral-100 p-4">
+          <img src="./assets/porsche.jpeg" alt="Photography 5" class="w-full h-full object-cover rounded-lg shadow-lg hover:shadow-xl">
+        </div>
+        <div class="mb-4 h-64 break-inside-avoid rounded-lg border-2 border-slate-400/10 bg-neutral-100 p-4">
+          <img src="./assets/porsche.jpeg" alt="Photography 6" class="w-full h-full object-cover rounded-lg shadow-lg hover:shadow-xl">
+        </div>
+        <div class="mb-4 h-72 break-inside-avoid rounded-lg border-2 border-slate-400/10 bg-neutral-100 p-4">
+          <img src="./assets/porsche.jpeg" alt="Photography 7" class="w-full h-full object-cover rounded-lg shadow-lg hover:shadow-xl">
+        </div>
+        <div class="mb-4 h-72 break-inside-avoid rounded-lg border-2 border-slate-400/10 bg-neutral-100 p-4">
+          <img src="./assets/porsche.jpeg" alt="Photography 8" class="w-full h-full object-cover rounded-lg shadow-lg hover:shadow-xl">
+        </div>
+        <div class="mb-4 h-96 col-span-2 break-inside-avoid rounded-lg border-2 border-slate-400/10 bg-neutral-100 p-4">
+          <img src="./assets/porsche.jpeg" alt="Photography 9" class="w-full h-full object-cover rounded-lg shadow-lg hover:shadow-xl">
+        </div>
+      </div>
+    </div>
+  </section> -->
+  
+
+<section id="gallery" class="pb-13 pt-16 bg-gray-900">
+    <div class="container mx-auto">
+      <h3 class="text-2xl font-bold text-center text-white">Gallery</h3>
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 px-10">
+        <div class="mb-4 h-96 break-inside-avoid  border-2 border-slate-400/10 bg-neutral-100 p-4">
+          <img src="./assets/porsche.jpeg" alt="Photography 1" class="w-full h-full object-cover  shadow-lg hover:shadow-xl">
+        </div>
+        <div class="mb-4 h-96 col-span-2 break-inside-avoid  border-2 border-slate-400/10 bg-neutral-100 p-4">
+          <img src="./assets/porsche.jpeg" alt="Photography 2" class="w-full h-full object-cover  shadow-lg hover:shadow-xl">
+        </div>
+        <div class="mb-4 h-80 break-inside-avoid  border-2 border-slate-400/10 bg-neutral-100 p-4">
+          <img src="./assets/porsche.jpeg" alt="Photography 3" class="w-full h-full object-cover  shadow-lg hover:shadow-xl">
+        </div>
+        <div class="mb-4 h-80 col-span-2 break-inside-avoid  border-2 border-slate-400/10 bg-neutral-100 p-4">
+          <img src="./assets/porsche.jpeg" alt="Photography 4" class="w-full h-full object-cover  shadow-lg hover:shadow-xl">
+        </div>
+        <div class="mb-4 h-60 break-inside-avoid  border-2 border-slate-400/10 bg-neutral-100 p-4">
+          <img src="./assets/porsche.jpeg" alt="Photography 5" class="w-full h-full object-cover  shadow-lg hover:shadow-xl">
+        </div>
+        <div class="mb-4 h-96 break-inside-avoid  border-2 border-slate-400/10 bg-neutral-100 p-4">
+          <img src="./assets/porsche.jpeg" alt="Photography 6" class="w-full h-full object-cover  shadow-lg hover:shadow-xl">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+
+    <!-- Contact Section -->
+    <!-- <section id="contact" class="py-16">
+        <div class="container mx-auto text-center">
+            <h3 class="text-2xl font-bold">Contact Me</h3>
+            <p class="mt-4 text-gray-400">Feel free to reach out to me via email: <a href="mailto:youremail@example.com" class="text-cyan-500 hover:underline">youremail@example.com</a></p>
+        </div>
+    </section> -->
+
+    <section id="contact" class="py-16 bg-gray-800">
+        <div class="container mx-auto text-center flex">
+            <div class="flex-1"></div> <!-- Empty div on the left -->
+            <div class="flex-1">
+                <h3 class="text-2xl font-bold">Contact Me</h3>
+                <div class="mt-6 flex justify-center space-x-6">
+                    <a href="https://www.linkedin.com/in/akash-adarkar-ba30441b3/" class="text-cyan-500 hover:text-cyan-700" target="_blank">
+                        <i class="fab fa-linkedin-in text-2xl">Linkedin</i>
+                    </a>
+                    <a href="https://github.com/AkashAdarkar" class="text-cyan-500 hover:text-cyan-700" target="_blank">
+                        <i class="fab fa-github text-2xl">Github</i>
+                    </a>
+                    <a href="https://tryhackme.com/r/p/akashadarkar" class="text-cyan-500 hover:text-cyan-700" target="_blank">
+                        <i class="fab fa-twitter text-2xl">TryHackMe</i>
+                    </a>
+                </div>
+                <p class="mt-4 text-gray-400">Feel free to reach out to me via email: <a href="mailto:akashadarkar1703@gmail.com" class="text-cyan-500 hover:underline">akashadarkar1703@gmail.com</a></p>
+            </div> <!-- End of right div with content -->
+        </div>
+    </section>
+    
+    
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-center py-4">
+        <p class="text-gray-400">&copy; 2025 Akash Adarkar. All rights reserved.</p>
+    </footer>
+</body>
+</html>
